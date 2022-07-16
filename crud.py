@@ -48,10 +48,10 @@ saida = int(input("Digite 0 para realizar um update: "))
 
 while saida != 1:
     read()
-    produto = input("Informe o ID do produto para update: ")
+    idvendas = input("Informe o ID do produto para update: ")
     preco = float(input("Informe o valor novo: "))
 
-    comando = f'UPDATE vendas SET preco = {preco} WHERE produto = "{produto}" '
+    comando = f'UPDATE vendas SET preco = {preco} WHERE idvendas = "{idvendas}" '
 
     cursor.execute(comando)
     conexao.commit()
@@ -67,10 +67,9 @@ saida = int(input("Digite 0 para realizar um delete: "))
 
 while saida != 1:
     read()
+    idvendas = input("Informe o ID para delete: ")
 
-    produto = input("Informe o produto para delete: ")
-
-    comando = f'DELETE FROM vendas WHERE produto = "{produto}" '
+    comando = f'DELETE FROM vendas WHERE idvendas = "{idvendas}" '
 
     cursor.execute(comando)
     conexao.commit()
