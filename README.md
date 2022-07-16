@@ -1,1 +1,3 @@
-# crud-python-mysql
+# CRUD Python + MySql
+
+CRUD simples utilizando Python + MwSql
